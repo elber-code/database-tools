@@ -1,0 +1,21 @@
+{
+  "type": "module",
+  "name": "database-tools",
+  "version": "1.0.0",
+  "description": "MCP tool that allows Claude to interact with MySQL databases",
+  "main": "index.js",
+  "keywords": [
+    "claude",
+    "mysql",
+    "database",
+    "mcp",
+    "anthropic"
+  ],
+  "author": "Elberfeld Perez",
+  "license": "ISC",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.8.0",
+    "mysql2": "^3.14.0",
+    "zod": "^3.24.2"
+  }
+}
