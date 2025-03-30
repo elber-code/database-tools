@@ -42,7 +42,7 @@ With the following structure:
     "database-tools": {
       "command": "node",
       "args": [
-        "D:\\path\\to\\index.js"
+        "C:\\path\\to\\index.js"
       ]
     }
   }

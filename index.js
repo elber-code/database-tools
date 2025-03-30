@@ -1,7 +1,10 @@
+import { config } from 'dotenv';
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
 import { executeMysqlQuery } from "./mysql.js";
+
+config();
 
 const server = new McpServer({
     name: "database-tools",
@@ -12,14 +15,14 @@ const server = new McpServer({
     },
 });
 
-server.tool("mysql-local", "Execute a query on the local MySQL database", {
+server.tool("mysql", "Execute a query in MySQL", {
     query: z.string().describe("SQL query to execute"),
 }, async ({ query }) => {
     try {
         return executeMysqlQuery(query, {
-            host: 'localhost',
-            user: 'root',
-            password: ''
+            host: process.env.DB_HOST || 'localhost',
+            user: process.env.DB_USER || 'root',
+            password: process.env.DB_PASSWORD || ''
         });
     }
     catch (error) {
