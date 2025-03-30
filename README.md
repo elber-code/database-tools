@@ -4,7 +4,7 @@ This is an MCP (Model Context Protocol) server that allows Claude AI to interact
 
 ## Features
 
-- Query local MySQL databases through Claude
+- Query MySQL databases through Claude
 - Execute any valid SQL query
 - Get information about tables, including size and structure
 - Formatted results for easy reading in Claude
@@ -53,17 +53,17 @@ With the following structure:
 
 Once configured, you can interact with your MySQL databases from Claude with commands like:
 
-1. **List all databases**
-   "Show me all databases in my local MySQL"
+1. **List all databases**  
+   "Execute query in MySQL to show me the databases."
 
-2. **View tables in a database**
-   "What tables are in the 'my_database' database?"
+2. **View tables in a database**  
+   "Execute query in MySQL to show me the table `name_table`."
 
-3. **Query the size of a table**
-   "What is the size of the 'users' table in my database?"
+3. **Query the size of a table**  
+   "Execute query in MySQL to show me the size of the table `name_table`."
 
-4. **Execute custom queries**
-   "Execute this SQL query: SELECT * FROM users WHERE active = 1"
+4. **Execute custom queries**  
+   "Execute query in MySQL: 'The description of what you want your query to do.'"
 
 ## Security
 
