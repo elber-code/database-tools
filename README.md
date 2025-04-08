@@ -1,5 +1,7 @@
 # Database Tools for Claude AI
 
+[![smithery badge](https://smithery.ai/badge/@elber-code/database-tools)](https://smithery.ai/server/@elber-code/database-tools)
+
 This is an MCP (Model Context Protocol) server that allows Claude AI to interact directly with MySQL databases.
 
 ## Features
@@ -10,6 +12,14 @@ This is an MCP (Model Context Protocol) server that allows Claude AI to interact
 - Formatted results for easy reading in Claude
 
 ## Installation
+
+### Installing via Smithery
+
+To install Database Tools for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@elber-code/database-tools):
+
+```bash
+npx -y @smithery/cli install @elber-code/database-tools --client claude
+```
 
 To install and use this tool, follow these steps:
 
